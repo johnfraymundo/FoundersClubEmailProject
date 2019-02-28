@@ -1,1 +1,9 @@
 this is a readme
+If i had more time I would create an initialization batch file to install necessary 3rd party libraries
+Libraries:
+email
+bs4
+eml_parser
+re
+smtplib
+datetime
