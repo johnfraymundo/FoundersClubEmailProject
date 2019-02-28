@@ -19,6 +19,12 @@ def main():
         efunct.emailReminders(actionableinfo, None, None, "late")
     else:
         pass
+    
+    #Uncomment to test each!
+    #Let me know if there is any issues with the gmail 
+    #efunct.emailReminders(actionableinfo, None, None, "normal")
+    #efunct.emailReminders(actionableinfo, None, None, "dueinweek")
+    #efunct.emailReminders(actionableinfo, None, None, "late")
 
 if __name__ == "__main__":
     main()
