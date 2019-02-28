@@ -92,7 +92,7 @@ def emailReminders(actionableinfo, custommessage, customsub, remindertype):
     """
     a = actionableinfo
 
-    destination = "johnfraymundo@gmail.com"#a[0]["UserEmail"]
+    destination = a[0]["UserEmail"]
     gmailAccount = "FoundersClubProjectTestEmail@gmail.com"
     password = "gobuild!"
 
