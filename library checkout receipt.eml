@@ -1,0 +1,151 @@
+Delivered-To: levi.bostian@gmail.com
+Received: by 2002:ab0:301:0:0:0:0:0 with SMTP id 1-v6csp200324uat;
+        Fri, 3 Aug 2018 07:48:11 -0700 (PDT)
+X-Google-Smtp-Source: AAOMgpfyb2gO/UTfPbqTXQAQVGPgJGjbZ+gHBpWUrYyNWtbWwScKOmOb6wSJfLi71wOiqzWPniDU
+X-Received: by 2002:a63:943:: with SMTP id 64-v6mr4105653pgj.368.1533307691932;
+        Fri, 03 Aug 2018 07:48:11 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1533307691; cv=none;
+        d=google.com; s=arc-20160816;
+        b=ZgoX/Q628yzOgovKByxXLVyyZcr1tzLIXkOFNlhf+BrTZ4Ndv+wKDDIdaCZFhDdNs3
+         29vQT0ciCUo5aRZ1PMgBAYDkKyd65Dbbo21KFb7ftZTbGjv5qV3zoSjFsPCKou5Axgmh
+         nrWyilHAvL9WerPeKcoY7u2p9wtxPt1Kpm6jlVSDmDe70OAT1pOhCfgqjtfsnzZ1UkDW
+         4cV3WvkxggLgF4duCgAajqBFP6Khrxa94h1DgJN/sCDfHi8r4/lS7SttjOMGvJxc0kBm
+         bA7g9EZj74dXYBA6jUZi1SQaF4GeCaEYVcEL8j3m++EGP33nwegyIFWetgi89FxnmpqN
+         LXwQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=spamdiagnosticmetadata:spamdiagnosticoutput:charset:mime-version
+         :subject:message-id:to:from:date:dkim-signature
+         :arc-authentication-results;
+        bh=GHkyzp8kzM3+8mCZqT9Cw+foIVF5i0l7OXnyVgoTgkM=;
+        b=aCJWYMwYnQwf5wGlS6j+znXK0ZNM9JQb1UgIZyKbzAI4Nu0LFYVHXHAAWQrkmz5Lku
+         c0xRzn9EfJzkttRh86Lpv+ZoiTkbteyElmp9i8NKFrVzU+oOhCSV5fubm2vY9j0jb1Mr
+         GjSUw4gwya0y/mpUD5Ks3RckPMWYQJZ8MiH0AnoFpY8K+graRccigwLVF+MvtBV2JIEZ
+         ZKYHEfQLATvYCCGZM2uxDoMk5DncTzWx/90zpgPteIXry+NJX5DhpLG+FJB7MC9aLW7w
+         5AJiN0h39izSKf3dZJI7YotVBAYcJq54aynWs0WYhaFBN0TjLE1gsI0QAEbuLxd7s7tu
+         fI6g==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@cedarrapidspubliclibrary.onmicrosoft.com header.s=selector1-crlibrary-org header.b=DSTsRL1J;
+       spf=pass (google.com: domain of no-reply@crlibrary.org designates 104.47.42.117 as permitted sender) smtp.mailfrom=no-reply@crlibrary.org
+Return-Path: <no-reply@crlibrary.org>
+Received: from NAM03-BY2-obe.outbound.protection.outlook.com (mail-by2nam03on0117.outbound.protection.outlook.com. [104.47.42.117])
+        by mx.google.com with ESMTPS id v16-v6si5041376pgb.96.2018.08.03.07.48.11
+        for <levi.bostian@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Fri, 03 Aug 2018 07:48:11 -0700 (PDT)
+Received-SPF: pass (google.com: domain of no-reply@crlibrary.org designates 104.47.42.117 as permitted sender) client-ip=104.47.42.117;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@cedarrapidspubliclibrary.onmicrosoft.com header.s=selector1-crlibrary-org header.b=DSTsRL1J;
+       spf=pass (google.com: domain of no-reply@crlibrary.org designates 104.47.42.117 as permitted sender) smtp.mailfrom=no-reply@crlibrary.org
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=cedarrapidspubliclibrary.onmicrosoft.com; s=selector1-crlibrary-org;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=GHkyzp8kzM3+8mCZqT9Cw+foIVF5i0l7OXnyVgoTgkM=;
+ b=DSTsRL1JJLYALMyERaKi0UkzDbe+D0Yl1SXjQxpngzVhmkqQ4RyinI2cZIlU4cKMTMZiWuiU39jc1kv8XnnRQqfnv6CdkHP7791YLx4XgpiY/aPHp/BT9yun0NmoTe/qBGxGRyF/ZIE+9zXClki1C/utWIcF0gWr5UBpOiKkwGU=
+Authentication-Results: spf=none (sender IP is )
+ smtp.mailfrom=no-reply@crlibrary.org; 
+Received: from NETSVCS.CRPL.ORG (207.191.195.82) by
+ MWHPR1201MB0270.namprd12.prod.outlook.com (2603:10b6:301:57::15) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.1017.14; Fri, 3 Aug
+ 2018 14:48:10 +0000
+Received: from pccharge ([10.1.10.17]) by NETSVCS.CRPL.ORG with Microsoft SMTPSVC(7.5.7601.17514);
+	 Fri, 3 Aug 2018 09:48:07 -0500
+Date: Fri, 3 Aug 2018 09:48:07 -0500 (CDT)
+From: Self.Service@crlibrary.org
+To: levi.bostian@gmail.com
+Message-ID: <20111294.181607.1533307687662.JavaMail.PCCHARGE$@relay.crlibrary.org>
+Subject: library checkout receipt
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_181606_7342164.1533307687662"
+charset: UTF-8
+Return-Path: Self.Service@crlibrary.org
+X-OriginalArrivalTime: 03 Aug 2018 14:48:07.0461 (UTC) FILETIME=[FDAB4550:01D42B38]
+X-Originating-IP: [207.191.195.82]
+X-ClientProxiedBy: MWHPR10CA0001.namprd10.prod.outlook.com (2603:10b6:301::11)
+ To MWHPR1201MB0270.namprd12.prod.outlook.com (2603:10b6:301:57::15)
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 1de197e5-2877-47b2-dd42-08d5f950222e
+X-Microsoft-Antispam:
+	BCL:0;PCL:0;RULEID:(7020095)(4652040)(8989117)(5600074)(711020)(4534165)(4627221)(201703031133081)(201702281549075)(8990107)(2017052603328)(7153060)(7193020);SRVR:MWHPR1201MB0270;
+X-Microsoft-Exchange-Diagnostics:
+	1;MWHPR1201MB0270;3:C996e6TX2PwNQDdrA4jQJ1iiQwOuoU4qZ5ygo2a3Bl+OQfpQ+j4lsOACTSGqwqv5W8vdNZCsPn41OBOIuweak0ESWFTeaz37vi0ZOzlfhDTUi24C4Ed2e+EFtOr360hNd4EGDH6hchr3xgd9TkPwmHkCSKCOh2eCsMecmkjk9V9d68OH5UeiqM4TdbiOlLjUZ7xsSDBNM3xROuxrSWfEGsbL9tz3Cdk8yyhJSp9XypYSsLqLrRCg5pW41L5lHqjX;25:JcUDgK9Rh2NbVzK/rAdQ4CmN5TE5H9mnLUxjW9njI/tzE4XWlQEDgWA1C31Bq7WMoeIxY2sy3io3eys0ml0Yh2lR1iMSjs3FD4+IvXelrrY8coHMR38NXKU6i+QnvteSCenPymLhKBTIqXl9jLbzb+sW+AC3GBouSst4jVL5pBL0U31lVp6korTVkUtE/ERvGdT3BoPDfGRlWcJfjtVECIyVO0yw4JdME2NwWAhRKqt3eBTd4OYGJBbrkxJCsSaVIZIMKtWRvW69e+35bYslt95AmNcz4rwhr5pd2Zy6v+6BOO/vEbOI4G9Mo+1MfVaJT1t+SGnKDNCS/dJz557+rw==;31:0Sgztp2bcwe/o2BMCXRKu7yn1UJo7wDTNMQmPqDzaGFWhQfywTe7iWK3lX1nBe/Y8WznleUSixK2xyifAVuUHv4CsN235BlTxzJJZd86iHi3nLc1/4EubP/CajTGaQtyhysADkdoJtLcJ/INiJUbJ5w1Jrj0ElqHcYDZqxeBky8upSD7d6L0COckBLH51UAlbPF2aaWUn9nE4xC1Sug3WG35SGKRwHvAFduvBnvbimc=
+X-MS-TrafficTypeDiagnostic: MWHPR1201MB0270:
+X-Microsoft-Exchange-Diagnostics:
+	1;MWHPR1201MB0270;20:3MlszmMZxVzkCZwxX0zBrlMphOslxtI+QOgdX9swfefOfaW245mNy9X07/D7/dB+QZh8+pa02Fo25oA9jJ3PayOtR9pecCcmno/QovQ/fROo2jEGXdT4MHVtV+42Ta3DOA4Oje65IN0+c3ae605UU4kV22IvLCRgTaSQ93Fnyk1C+PS2R0ASe5QHvfP8Z/6I8XHH/fVor9WM4Y5DiCSvl+A1UCFuiOUXjIoQZ8iweqYXltImPsEOMdhzXQJVfgJT;4:9DWO+7K4LjfQaTMh2LTqQw7ULMSB1FYPlo7VUo+T+b2x6IKBL8o5ZhbeZ2Fhft9Mg0LgMInTy+iuOfmiFswBGDizuk/ZiGTn+DNZ52AUi43TrvFkPtOGtGHC3RmhYKrc0GYrpk79/IEav7VOphyUcQYPKeHW1RxwYCN8S/gGdXXCxa1rlvy+R+YkiHJQINGl7JgxqQ5c7KfD0/HMa+YsN5TaPgpr8aJMncAaA1pwKV7rr0GPGGJoeMRIfZxEdEOb03MktQX8495vKPR8+YumtQ==
+X-Microsoft-Antispam-PRVS:
+	<MWHPR1201MB0270C7501A371B815B385FED9E230@MWHPR1201MB0270.namprd12.prod.outlook.com>
+X-Exchange-Antispam-Report-Test: UriScan:;
+X-MS-Exchange-SenderADCheck: 1
+X-Exchange-Antispam-Report-CFA-Test:
+	BCL:0;PCL:0;RULEID:(6040522)(2401047)(5005006)(8121501046)(3231311)(944501410)(52105095)(10201501046)(3002001)(93006095)(93001095)(149027)(150027)(6041310)(20161123564045)(20161123562045)(20161123560045)(201703131423095)(201702281529075)(201702281528075)(20161123555045)(201703061421075)(201703061406153)(20161123558120)(6072148)(201708071742011)(7699016);SRVR:MWHPR1201MB0270;BCL:0;PCL:0;RULEID:;SRVR:MWHPR1201MB0270;
+X-Forefront-PRVS: 0753EA505A
+X-Forefront-Antispam-Report:
+	SFV:NSPM;SFS:(10019020)(376002)(366004)(39840400004)(136003)(396003)(346002)(12063002)(189003)(199004)(8936002)(8676002)(66066001)(68736007)(53936002)(5660300001)(84326002)(97736004)(57986006)(69596002)(305945005)(7116003)(81166006)(5000100001)(4610100001)(81156014)(7736002)(478600001)(2361001)(9686003)(122856001)(26005)(2351001)(52116002)(105586002)(316002)(86816001)(386003)(106356001)(3846002)(476003)(85226003)(486006)(2476003)(16586007)(786003)(6116002)(186003)(77096007)(6916009)(270700001)(2906002)(3480700004)(33896004)(39060400002)(133083001)(85772001)(550174008);DIR:OUT;SFP:1102;SCL:1;SRVR:MWHPR1201MB0270;H:NETSVCS.CRPL.ORG;FPR:;SPF:None;LANG:en;PTR:InfoNoRecords;MX:1;A:1;
+Received-SPF: None (protection.outlook.com: crlibrary.org does not designate
+ permitted sender hosts)
+X-Microsoft-Exchange-Diagnostics:
+	=?us-ascii?Q?1;MWHPR1201MB0270;23:3b16eXrvmRtsNNKdHxyyuZFaa4Z7ZyULlBYiTJo?=
+ =?us-ascii?Q?PQGlwkzs790XotHyKLvZyFffMIYB2SvmpkdOUbhsW03da6YWxddJRms+0b4k?=
+ =?us-ascii?Q?PEHuYjC1YTmy8499mRbZF5M5hAxKIFf1bhHOmWjj0mJs/+tidhAOSgl3+nkn?=
+ =?us-ascii?Q?q3OaaAqjRGkyvXGl5+dN+uc+4642V7OaJwQtverYjq+PX83AIP2e3FqJdDmL?=
+ =?us-ascii?Q?imgWiiDq2K0xMNQbEEvw5Hl0H8ieGGfcjiu9xYiwgFLNxbOZAm0W/sG1zG5D?=
+ =?us-ascii?Q?QljG0YJURmrel2J57tRFzVM+rc78yI33cCzKrY8g+a9OCLGTjLAcHIzbjsWe?=
+ =?us-ascii?Q?mpfdEvYjAdPQFuXVLcIxRLAytK1ijOqxB6hZU3tv6qqctruosctbnG+xzTF/?=
+ =?us-ascii?Q?ATkTFdaRg3TEGvTr+wfWzuHSebXfIKW2Axr6igBn3EkG7+aIhpIEfMv9mqdT?=
+ =?us-ascii?Q?nViYhKRCpiB+HehkiPpVcdiR3h/iFCH7WNrKYNDP0PmrjFCddDaPwXRgMqJd?=
+ =?us-ascii?Q?vUKzN5JPr4Nav66+lRleH9PZy+3xQGcztipg8ak/KJcFxMqzQaBS26tcZPrX?=
+ =?us-ascii?Q?4z2e239Llej4O+aU5RUxdhDvD187UD1cgwFJeUG7pRUXT36KY/WWrPdQnsA/?=
+ =?us-ascii?Q?dmr02BMlT9NUs3EcI6TU4ml4goG6SP/wjLyMtw+iIOfrY2cn36oI7zEibew9?=
+ =?us-ascii?Q?oEgG8Nzu6tN+S0DlgO3yPPISVXHW2h47fWZXspU+j7AxtaT06BV+a6K8l/an?=
+ =?us-ascii?Q?avdHQe+wweUoTqXq3j4LB/sSkRNLSE7gAOpEA07XVlFXpbXgNvIxOhAQ0e2N?=
+ =?us-ascii?Q?KpHUvBWerG2UDTags/qo3qSeHdjtwCubts/qRi2AnS8JQiDxbmExd4BKsgJU?=
+ =?us-ascii?Q?JoFYec7hIXeMvcq/Su/pGtJXq7AR4F7zu6xfHrBg/R4861WCLN8VLHcfA+gN?=
+ =?us-ascii?Q?mLA5EU0DeOA+hTPYQIP3MqGCEeJdvKKbBDV1VXnXZ+yDOvQljma90HbhZRN/?=
+ =?us-ascii?Q?Xs2+osydwR4CVbCoSyq4nR0PlAyJ04fnVbFwCBlkhSoQHl7l+UmE6WTQt5wd?=
+ =?us-ascii?Q?TAnyj/nQ32i23Ho/ZJDd+jglwc1rVsGBvVzNCu+/SFdGj7fOK1Gnkn3e9ph9?=
+ =?us-ascii?Q?vD34SNHp9ObqsePHo9Kqy1TAvY7M/TALzqxeJP0KtsEcTYA6pQAc+PtBC4gD?=
+ =?us-ascii?Q?CJfwPY1SqStmNPpocrCF+k8EzuQwtoxcC+drFgxvkKNUp1m6Tp8CH7M/3V1W?=
+ =?us-ascii?Q?4k7kl2P+Rd6AnqSkmGI9+SqwwInEudmT43O1dvVZZJWbYNUh5aj4Z4MJxYq1?=
+ =?us-ascii?Q?PnQ=3D=3D?=
+X-Microsoft-Antispam-Message-Info:
+	jPKKeyEi62V3lCkUs3HKjpVXSlJZt9ZxtVX+xYKfhNwKgEwi/zphr4OvIC1cSQ20tgGRaJfKUomtIY2IYK8irBcUT5xJxVTfOuGQu1PoRCHG/SVyblpismOVLFapi0YBCuOlblxGAijV8VoYCAYFTRWLJzwg0N3ng1Y8QJSDgBVg7VL03u2S9QCktguapV3FRLhx1xZ671VlN1Xw1SL+eOEUHHtIA3Mxj5kXQXnzBBucjcoxL7sNYUpHOAcxpY68Qvh65SfY6jjXdbub5nSzbPel9QygkXTWKeb/m8cQi/fZ9KlJ4h982rSw4VsuddNrzBrTu2HeS6+3ZS4UvWq1jHkHOAjHO/eEe142P1kuyS8=
+X-Microsoft-Exchange-Diagnostics:
+	1;MWHPR1201MB0270;6:GWGkWdzZlldh1mwrrcnMd855Tnp2Ku8QIKp4HIeqoS/ESFE1OxVvqGJwsbaIn0tbXSMJ1Mra+UgVENgOmf8H4lVzKnLb7Gn7WMf4uwzu3puyd2CkFqPv3gtelbMJTEAi0R2VUxOz6IOUjXEDOEW7+8xdT8zTxCry64lnvKuWrMICwfnsNSB/PtUM1jWz2YCYG438UrP7/KJ7ZaDJhmTwd4VC+ZEnEy76ivUxvpXly+hECKnxt6Ed2ZPkq4mxYTkje++nDFdqsGjlUK6qOF+Pvx07ZaqRFYp9Mm7YzScWpPHQStgY9wMwubFrZyJzaAezenOIoMuEuOcJcrxl7QIMad9CstRQP0MmQYGfnmfTTlMd0qQHOujIDongnOPNTuyE9tYzAisqneYpQr3cgQe9DIGxDrqWv7bz3joePOvybl5S+oOAlTg53nplSy6f0h04mA2wRPTqofNsAqfgCR4pkA==;5:TA/eZqnCFKOYyDvfI2kWh2J3Zxhdvh/TJBGcwh/mAD3D4MF395zdjBiL58bAo9aqn6tYMALxKG93eUwswDJnttk0/ldAQMHo72I45wyhh2tuTJ1QRl0DMKvNQGUFvBUZ31RAZdlBL/ZHm76F9mk0yJ3iQx5LnHOOEANrMFZzexM=;7:SRNPE/3c3VxneIrN6gKC9++WEocExrYyJ3vXBuF1O8XWf1kg47xbFi71QZQ0TzTd0IGsoaWCse2/z/S2K9KZDGkNspFykfO1oS9DoDyf+ANxSNrUVLHR/ym8giMGWsRXDlGJ9cD/PrH7LFJWQ3e3S/vcMpyafTPRu1oq5fVhrPYdpZeRGlkNchx0WxTZw5N5N13feryimFKb3iVtGpmHLye0G7jD8KyLsZqTeBGOB3ByXWUqWLDKtrVG52KewXbM
+SpamDiagnosticOutput: 1:99
+SpamDiagnosticMetadata: NSPM
+X-OriginatorOrg: crlibrary.org
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 03 Aug 2018 14:48:10.7778 (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id:
+	1de197e5-2877-47b2-dd42-08d5f950222e
+X-MS-Exchange-CrossTenant-FromEntityHeader: Hosted
+X-MS-Exchange-CrossTenant-Id: 57263d33-852d-4690-92e5-023512b0cb27
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: MWHPR1201MB0270
+
+------=_Part_181606_7342164.1533307687662
+Content-Type: text/html
+Content-Transfer-Encoding: 7bit
+
+ 
+		<center><h2>Cedar Rapids Public Library</h2></center>
+		<center><h3>319-261-READ ; CRLibrary.org</h3></center>
+		<hr>
+		<h4>Date: 8/3/2018 | Time: 9:48:35 AM</h4>
+		<h4>Fines/Fees Owed: $0.00</h4>
+		<br>
+		<h4><b>Total Checked Out: 1</b></h4>
+		<hr>
+
+		<h4><b>Checked Out</b></h4>
+		
+		<h4>
+			Title: Valley of genius : the uncensored history of Silicon Valley, as told by the hackers, founders, and freaks who made it boom<br>
+			Barcode: 0000123358814<br>
+			Due Date: 8/24/2018,23:59  &nbsp;<br>
+		</h4>
+		<p>
+		
+			
+		<center><h4>Page 1 of 1</h4></center>
+
+------=_Part_181606_7342164.1533307687662--
