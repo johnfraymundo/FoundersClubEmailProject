@@ -151,11 +151,15 @@ def sendDates(actionableinfo):
     """
     act = actionableinfo
     today_date = datetime.datetime.now()
+    # to test dates set today_date equal to this template "08/23/2018" or "MM/DD/YYYY" change the dates however you like
+    #tform = "%m/%d/%Y"
+    #convert_today = datetime.datetime.strptime(today_date, form)
 
     due_date = act[1]["duedate"].rsplit(",")[0]
     form = "%m/%d/%Y"
     converted_form = datetime.datetime.strptime(due_date, form) - datetime.timedelta(days = 1)
 
+    #if running custom date replace today_date with convert_today 
     if(today_date == converted_form):
         return "dueinday"
     elif(today_date > converted_form):
